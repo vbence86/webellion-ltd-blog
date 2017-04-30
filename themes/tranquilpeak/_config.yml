@@ -58,34 +58,22 @@ sidebar:
             url: /#about
             icon: question
     author_links:
-        # github:
-        #     title: global.github
-        #     url: https://github.com/
-        #     icon: github
-        # stack_overflow:
-        #     title: global.stack_overflow
-        #     url: http://stackoverflow.com/users
-        #     icon: stack-overflow
-        # twitter:
-        #     title: global.twitter
-        #     url: https://twitter.com/
-        #     icon: twitter
-        # facebook:
-        #     title: global.facebook
-        #     url: https://facebook.com/
-        #     icon: facebook
-        # google_plus:
-        #     title: global.google_plus
-        #     url: https://plus.google.com/
-        #     icon: google-plus
-        # linked_in:
-        #     title: global.linkedin
-        #     url: https://www.linkedin.com/profile/
-        #     icon: linkedin
-        # mail:
-        #     title: global.mail
-        #     url: mailto:
-        #     icon: envelope-o
+        github:
+            title: vbence86
+            url: https://github.com/vbence86
+            icon: github
+        twitter:
+            title: vbence86
+            url: https://twitter.com/vbence86
+            icon: twitter
+        linked_in:
+            title: Bence Varga
+            url: https://www.linkedin.com/in/bence-varga-53393565/
+            icon: linkedin
+        mail:
+            title: global.mail
+            url: mailto:vbence86@gmail.com
+            icon: envelope-o
     rss:
         rss:
             title: global.rss
@@ -181,3 +169,15 @@ swiftype_install_key:
 fb_admin_ids:
 # Your Facebook app id used to connect your blog with your facebook app account (Facebook Insights). E.g : 9841307
 fb_app_id:
+
+#### sharing options
+sharing_options:
+    facebook:
+        icon: "fa-facebook-official"
+        url: "https://www.facebook.com/sharer/sharer.php?u={{post.permalink}}"
+    twitter:
+        icon: "fa-twitter"
+        url: "https://twitter.com/intent/tweet?text={{post.permalink}}"
+    google_plus:
+        icon: "fa-google-plus"
+        url: "https://plus.google.com/share?url={{post.permalink}}"
