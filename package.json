@@ -6,9 +6,11 @@
     "version": "3.3.5"
   },
   "scripts": {
-    "start": "hexo server"
+    "start": "forever start --uid blog --append -c 'hexo server' ./",
+    "stop": "forever stopall"
   },
   "dependencies": {
+    "forever": "^0.15.3",
     "hexo": "^3.2.0",
     "hexo-algoliasearch": "^0.2.1",
     "hexo-cli": "^1.0.2",
