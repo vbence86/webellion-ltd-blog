@@ -42,10 +42,10 @@ Just by changing the `package-lock.json` and re-running `npm install` no change 
 
 We all know what's the most relaible way to do so. 
 
-`
+```javascript
 rm -rf ./node_modules
 npm install 
-`
+```
 
 This again regenerates our `package-lock.json` with the invalid `16.0.0` version.
 
@@ -66,11 +66,11 @@ Another significant change in my approach will be the usage of `--no-package-loc
 
 As the next step, I'm revalidating the `npm` cache and re-installing the dependencies in hopes for getting `react v15.5.0` installed as desired.
 
-`
+```javascript
 rm -rf ./node_modules
 npm install --no-package-lock
 
-`
+```
 
 Let's see our `package-lock.json`.
 
@@ -78,11 +78,11 @@ Let's see our `package-lock.json`.
 
 Alright, `npm` has not regenerated the `package-lock.json`, but let's see if the appropriate version of `react` has been installed. To check this, I'm going to open the corresponding `package.json` file in `node_modules/react/` folder. 
 
-`
+```javascript
 ...
  "version": "16.0.0"
 ...
- `
+ ```
 
 So to recap, `--no-package-lock` flag makes `npm` completely disregard the shrinkwrap functionality and therefore all the dependencies will be installed as `package.json` defines. 
 
@@ -94,10 +94,10 @@ So it seems like we've got to do this the cumbersome way. My intent is to direct
 
 Revalidate and re-install the packages accordingly. 
 
-`
+```javascript
 rm -rf ./node_modules
 npm install
-`
+```
 
 Check our relevant bit of `package-lock.json`.
 ![carbon 10](https://user-images.githubusercontent.com/6104164/31436052-f3ee505e-ae81-11e7-96da-5b4786987725.png)
@@ -105,11 +105,12 @@ Check our relevant bit of `package-lock.json`.
 Cool! It's now obviously generated with the right version. I'm going to verify whether we've got the right version and then execute the app in the browser to double check whether the React error has disappeared. 
 
 Version of React package in `./node_modules/react/`.
-`
+
+```javascript
 ...
  "version": "15.5.0"
 ...
- `
+```
  
 Result of execution. 
 
@@ -121,7 +122,7 @@ The app renders our message and we can now see only a Warning about `React.creat
 ## Lock the version
 To go on, we're going to assume that a newer version of the app, nonetheless requires `react 16.0.0`. Let's see what happens if we update our `package.json`. To addition to our previous steps, I'm increasing the major version of my package to tell `npm` to persist this into the lockfile.
 
-`
+```javascript
 ...
   "version": "2.0.0",
   
@@ -131,14 +132,14 @@ To go on, we're going to assume that a newer version of the app, nonetheless req
   ...
   }
 ...
-`
+```
 
 Revalidate `npm` chache and re-install dependencies with `--no-package-lock` flag to forbid `hpm` regenerating the lock file.
 
-`
+```javascript
 rm -rf ./node_modules
 npm install --no-package-lock
-`
+```
 
 Though our `package-lock.json` has been intact without setting our react dependency to `16.0.0` 
 
@@ -168,12 +169,12 @@ The usage of the caret symbol along with our locked dependency in `package-json.
 ## Using npm update
 Be careful as `npm update` will update your `package-lock.json` with the available transitive dependencies. In my case it updated both my `package.json` along with `package-lock.json`.
 
-`
+```
 $ npm update 
 + react@15.6.2
 + react-dom@15.6.2
 added 2 packages and updated 2 packages in 3.054s
-`
+```
 
 ![carbon 13](https://user-images.githubusercontent.com/6104164/31438869-542e2270-ae8a-11e7-90e3-fb7227cdcb0c.png)
 
