@@ -4,8 +4,6 @@ date: 2017-10-11 15:41:16
 tags: npm package.json package-lock.json package-lock dependency management npm5 react
 ---
 
-# How npm 5+ works with package-lock
-
 Having had hard times understanding how exactly npm processes package-lock.json and at what stages it is being updated, I put a little guide together to sort of reverse engineer in what way the locked dependencies are updated. This is not going to be an exhausting research about every aspects of npm dealing with these locked dependecies, but rather a very quick step-by-step guide that lines up my findings.
 
 ## Preparations
