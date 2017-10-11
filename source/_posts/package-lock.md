@@ -11,7 +11,7 @@ To get the ball rolling, I prepared a rather simple React boilerplate project to
 
 Let's swiftly take a glimpse through the fundamental project files.
 
-```app.js```
+`app.js`
 ![carbon 2](https://user-images.githubusercontent.com/6104164/31431351-bb5ce0c4-ae73-11e7-8ce9-880decff9a1b.png)
 
 ```webpack.config.js```
