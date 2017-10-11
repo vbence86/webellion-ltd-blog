@@ -67,12 +67,12 @@ sidebar:
             url: https://twitter.com/vbence86
             icon: twitter
         linked_in:
-            title: Bence Varga
-            url: https://www.linkedin.com/in/bence-varga-53393565/
+            title: Webellion Ltd
+            url: https://www.linkedin.com/company/11257575/
             icon: linkedin
         mail:
             title: global.mail
-            url: mailto:vbence86@gmail.com
+            url: mailto:info@webellionlimited.com
             icon: envelope-o
     rss:
         rss:
@@ -101,7 +101,7 @@ header:
 # Your biography and your job is editable in each languages files in `languages` folder
 author:
     email: vbence86@gmail.com
-    location: London
+    location: Madrid
     # Your profile picture located in folder `source/_images/` (development)
     # or in `source/assets/images/` (production)
     # or you can use an external url
